@@ -1,0 +1,100 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+div {
+  display: block;
+}
+html {
+  color: -internal-root-color;
+}
+header {
+  max-width: 95%;
+  min-height: 140px;
+  background-color: #fff;
+  border-top: 5px solid #81b300;
+  /* padding: 35px 30px; */
+  position: relative;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* ICONS */
+.icons {
+  width: 250px;
+  height: 50px;
+  background-color: #81b300;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  right: 30px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  background-color: #1f1f1f;
+  border-radius: 50%;
+}
+.icon--linkedin {
+  background-image: url(../icon/icon-linkedin.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon--twitter {
+  background-image: url(../icon/icon-twitter.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon--pinterest {
+  background-image: url(../icon/icon-pinterest.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon--google-plus {
+  background-image: url(../icon/icon-google-plus.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon--rss {
+  background-image: url(../icon/icon-rss.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.title {
+  padding-top: 0.5em;
+  margin: 0;
+}
+
+.title--text {
+  color: #333333;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.title--text::first-letter {
+  font-size: 46px;
+  line-height: 46px;
+}
+
+.title--subtitle {
+  color: #999999;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+}
