@@ -192,15 +192,4 @@ header {
   font-weight: 700;
   text-transform: uppercase;
 }
-/* @media (min-width: 360px) {
-  .b-search-form__input {
-    float: left;
-    width: 200px;
-    border-right: 1px solid #ddd;
-  }
-}
-@media (min-width: 360px) {
-  .b-search-form__input_button {
-    width: 80px;
-  }
-} */
+
