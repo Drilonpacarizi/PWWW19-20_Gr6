@@ -3,6 +3,7 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
+  background-color: #1f1f1f;
 
   font-family: Georgia, serif;
   display: block;
@@ -18,13 +19,14 @@ html {
   color: -internal-root-color;
 }
 header {
-  max-width: 95%;
+  max-width: 98%;
   background-color: #fff;
   border-top: 5px solid #81b300;
   /* padding: 35px 30px; */
   position: relative;
   margin: 0 auto;
 }
+
 
 /* * {
   box-sizing: border-box;
@@ -76,6 +78,8 @@ header {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+
 
 .title {
   padding-top: 0.5em;
@@ -139,32 +143,70 @@ header {
   border-right: 1px solid #81b300;
 }
 
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row [class^="col-"] {
+  float: left;
+}
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+}
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+.row .col-2-of-4 {
+  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+}
+.row .col-3-of-4 {
+  width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * (6rem));
+}
+
 .MenuFrame {
-  max-width: 95%;
-  /* padding: 40px 30px; */
+  max-width: 98%;
+  padding: 40px 30px;
   height: 70px;
   margin: 0 auto;
-  margin-top: 2em;
+  /* margin-top: 2em; */
+  border-top: 30px solid #fff;
   background-color: #81b300;
   text-align: center;
 }
-/* .container {
-  width: 100%;
-  padding-right: 25px;
-  padding-left: 25px;
-  margin-right: auto;
-  margin-left: auto;
-} */
+.container {
+  position: relative;
+  top: -13px;
+}
 .MainMenu {
   list-style: none;
+  text-decoration:none;
   overflow: hidden;
-  padding-left: 0;
-  padding-right: 1.5em;
-  margin: 0;
-  margin-top: 25px;
-  margin-left: 2em;
 
-  /* padding: 1px 1px 1px 1px; */
+  /* padding-left: 0;
+  padding-right: 1.5em; */
+  margin: 0;
+  padding: 0;
+  /* margin-top: 25px;
+  margin-left: 2em; */
+  /* bottom: 50px; */
+   padding: 1px 12px 1px 1px; 
   float: left;
   text-align: left;
 }
@@ -172,27 +214,27 @@ header {
   color: #fff;
   font-size: 12px;
   font-weight: 400;
-  line-height: 20px;
+  /* line-height: -5px; */
   text-transform: uppercase;
   margin: 4px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .b-search-form {
   overflow: hidden;
   float: right;
-  padding-right: 2em;
+  /* padding-right: 2em; */
 }
 .b-search-form__input {
-  height: 20px;
-  padding: 8px;
+  height: 30px;
+  /* padding: 8px; */
   width: 200px;
   border: none;
   border-bottom: 1px solid #ddd;
   background-color: #fff;
   color: #7f7f7f;
   font-size: 12px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   font-weight: 400;
   float: left;
   align-items: right;
@@ -216,7 +258,7 @@ header {
   padding: 80px 0;
   /* margin-left: 49px; */
   /* margin: 0 1.5em 1.5em; */
-  max-width: 95%;
+  max-width: 98%;
   margin: 0 auto;
 
   background: #f2f2f2;
@@ -228,3 +270,22 @@ header {
   height: 360px;
   border: 10px solid #fff;
 }
+
+/* #utilities {
+  max-width: 98%;
+  height: 300px;
+  color: white;
+  text-align: center;
+  margin:0 auto;
+  background-color: white;
+}
+
+.container2 {
+  position: relative;
+  height: 300px;
+}
+#utilities--image1 {
+  background-image: url(../icon/icon-twitter.png);
+  background-repeat: no-repeat;
+  background-position: center;
+} */
