@@ -27,7 +27,6 @@ header {
   margin: 0 auto;
 }
 
-
 /* * {
   box-sizing: border-box;
 } */
@@ -78,8 +77,6 @@ header {
   background-repeat: no-repeat;
   background-position: center;
 }
-
-
 
 .title {
   padding-top: 0.5em;
@@ -196,7 +193,7 @@ header {
 }
 .MainMenu {
   list-style: none;
-  text-decoration:none;
+  text-decoration: none;
   overflow: hidden;
 
   /* padding-left: 0;
@@ -206,7 +203,7 @@ header {
   /* margin-top: 25px;
   margin-left: 2em; */
   /* bottom: 50px; */
-   padding: 1px 12px 1px 1px; 
+  padding: 1px 12px 1px 1px;
   float: left;
   text-align: left;
 }
@@ -271,21 +268,34 @@ header {
   border: 10px solid #fff;
 }
 
-/* #utilities {
+.uts {
   max-width: 98%;
   height: 300px;
-  color: white;
   text-align: center;
-  margin:0 auto;
-  background-color: white;
+  margin: 0 auto;
+  background-color: #fff;
 }
 
-.container2 {
+/* .container2 {
   position: relative;
   height: 300px;
-}
-#utilities--image1 {
-  background-image: url(../icon/icon-twitter.png);
-  background-repeat: no-repeat;
-  background-position: center;
 } */
+
+.ut img {
+  margin-top: 40px;
+}
+.uts h3 {
+  color: #81b300;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-transform: capitalize;
+}
+
+.uts p {
+  color: #888;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20.8px;
+  margin-top: 20px;
+}
