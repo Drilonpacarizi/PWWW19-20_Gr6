@@ -286,8 +286,9 @@ header {
 }
 .uts h3 {
   color: #81b300;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
+  text-align: center;
   line-height: 21.6px;
   text-transform: capitalize;
 }
@@ -298,4 +299,64 @@ header {
   font-weight: 400;
   line-height: 20.8px;
   margin-top: 20px;
+  text-align: center;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.PrTitles {
+  max-width: 98%;
+  height: 500px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 5em;
+  background-color: #fff;
+}
+
+.PrTitles img {
+  width: 200px;
+  height: 130px;
+}
+
+.PrTitles p {
+  color: #888;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20.8px;
+  position: relative;
+  top: -8px;
+  text-align: left;
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+.PrTitles h4 {
+  text-align: left;
+  padding-left: 3.7em;
+  color: #444;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  text-transform: capitalize;
+  margin-top: 25px;
+}
+
+.PrTitles hr {
+  margin-top: -2em;
+  max-width: 95%;
+}
+
+.PrTitles--wd {
+  font-size: 13px;
+  color: #81b300;
+  display: block;
+  text-align: right;
+  position: relative;
+  top: -7px;
+  text-decoration: none;
+}
+
+.different {
+  font-size: 10px;
+  color: #81b300;
 }
