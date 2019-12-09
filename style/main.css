@@ -252,18 +252,18 @@ header {
 
 #slider {
   text-align: center;
-  padding: 80px 0;
+  padding: 65px 0;
   /* margin-left: 49px; */
   /* margin: 0 1.5em 1.5em; */
   max-width: 98%;
   margin: 0 auto;
-
+  height: 520px;
   background: #f2f2f2;
   z-index: -9999;
 }
 
 .images img {
-  width: 880px;
+  width: 800px;
   height: 360px;
   border: 10px solid #fff;
 }
@@ -344,7 +344,7 @@ header {
 
 .PrTitles hr {
   margin-bottom: 3em;
-  max-width: 73%;
+  max-width: 77%;
   color: #e2e2e2;
 }
 
@@ -379,14 +379,13 @@ header {
 #footer-section {
   background-color: #3b3b3b;
   max-width: 98%;
-
   margin: 0 auto;
 }
 
 .footer-container {
   display: block;
   width: 255px;
-  height: 186px;
+  height: 230px;
   margin-top: 3rem !important;
   margin-left: 1em;
 }
@@ -501,4 +500,115 @@ small {
   text-transform: uppercase;
   border-radius: 5px;
   float: left;
+}
+
+#about-me {
+  max-width: 98%;
+  min-height: 60px;
+  background-color: #2e2e2e;
+  padding: 20px 20px;
+  margin: 0 auto;
+  color: #737373;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+}
+.about-me {
+  height: 40px;
+}
+.about-me p:first-of-type {
+  float: left;
+}
+
+.about-me p:last-of-type {
+  float: right;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.leftarrow,
+.rightarrow {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background: #333 center no-repeat;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -9,6 +9,7 @@
   </head>
   <body>
     <header>
+      <!-- <div class="container"> -->
       <div class="icons">
         <a href="#" class="icon icon--linkedin"></a>
         <a href="#" class="icon icon--twitter"></a>
@@ -34,50 +35,80 @@
           </li>
         </ul>
       </div>
+      <!-- </div> -->
     </header>
 
     <nav class="MenuFrame">
       <div class="menu">
-        <div class="row">
-          <div class="col-2-of-3">
-            <div class="MainMenu">
-              <a href="main.html" class="MainMenu MainMenu--MenuItem">HomePage</a>
-              <a href="#" class="MainMenu MainMenu--MenuItem">Style Demo</a>
-              <a href="#" class="MainMenu MainMenu--MenuItem">Full Width</a>
-              <a href="#" class="MainMenu MainMenu--MenuItem">Portfolio</a>
-              <a href="#" class="MainMenu MainMenu--MenuItem">Gallery</a>
-              <a href="dropdown.html" class="MainMenu MainMenu--MenuItem">DropDown</a>
+        <div class="container">
+          <div class="row">
+            <div class="col-2-of-3">
+              <div class="MainMenu">
+                <a href="main.html" class="MainMenu MainMenu--MenuItem"
+                  >HomePage</a
+                >
+                <a href="#" class="MainMenu MainMenu--MenuItem">Style Demo</a>
+                <a href="#" class="MainMenu MainMenu--MenuItem">Full Width</a>
+                <a href="#" class="MainMenu MainMenu--MenuItem">Portfolio</a>
+                <a href="#" class="MainMenu MainMenu--MenuItem">Gallery</a>
+                <a href="dropdown.html" class="MainMenu MainMenu--MenuItem"
+                  >DropDown</a
+                >
+              </div>
             </div>
-          </div>
-          <div class="col-1-of-3">
-            <form class="b-search-form b-menu__search-form">
-              <input
-                class="b-search-form__input"
-                type="text"
-                placeholder="Search our website..."
-              />
-              <input
-                class="b-search-form__input b-search-form__input_button"
-                type="submit"
-                value="Search"
-              />
-            </form>
+            <div class="col-1-of-3">
+              <form class="b-search-form b-menu__search-form">
+                <input
+                  class="b-search-form__input"
+                  type="text"
+                  placeholder="Search our website..."
+                />
+                <input
+                  class="b-search-form__input b-search-form__input_button"
+                  type="submit"
+                  value="Search"
+                />
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </nav>
     <section id="slider">
-      <div class="images">
-        <img src="img/2.png" alt="" />
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="img/1.png" style="width:800px; height: 360px;" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/2.png" style="width:800px; height: 360px;" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/3.jpg" style="width:800px; height: 360px;" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/4.png" style="width:800px; height: 360px;" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/5.jpg" style="width:800px; height: 360px;" />
+        </div>
       </div>
-      <div class="b-slider__controls">
-        <div class="b-slider__btn-move b-slider__btn-move_previous"></div>
-        <div class="b-slider__btn-select"></div>
-        <div class="b-slider__btn-select"></div>
-        <div class="b-slider__btn-select"></div>
-        <div class="b-slider__btn-select b-slider__btn-select_active"></div>
-        <div class="b-slider__btn-select"></div>
-        <div class="b-slider__btn-move b-slider__btn-move_next"></div>
+      <br />
+
+      <div style="text-align:center">
+        <span class="leftarrow" onclick="plusSlides(-1)">
+          <img src="icon/left-arrow.png" alt=""
+        /></span>
+
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="rightarrow" onclick="plusSlides(1)">
+          <img src="icon/right-arrow.png" alt="" />
+        </span>
       </div>
     </section>
 
@@ -295,5 +326,16 @@
         </div>
       </div>
     </footer>
+    <footer id="about-me">
+      <div class="container">
+        <div class="about-me">
+          <p>
+            Copyright &copy 2013 - All Rights Reserved - Domain Name
+          </p>
+          <p>Template by OS Templates</p>
+        </div>
+      </div>
+    </footer>
   </body>
+  <script src="script/main.js"></script>
 </html>
