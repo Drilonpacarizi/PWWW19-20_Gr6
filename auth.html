@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style/tours.css" />
-    <link rel="stylesheet" href="style/icon-font.css" />
-    <title>Tourist</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style/auth.css" />
   </head>
   <body>
     <header>
@@ -29,8 +28,8 @@
           </li>
 
           <li class="menuItem menuItem--item">
-            <a href="auth.html">Sign Up</a>
-            <a href="auth.html">Login</a>
+            <a href="#">Sign Up</a>
+            <a href="#">Login</a>
             <a href="#">RSS Feeds</a>
             <a href="#">Archived News</a>
           </li>
@@ -40,15 +39,17 @@
     </header>
 
     <nav class="MenuFrame">
-      <div class="container">
-        <div class="menu">
+      <div class="menu">
+        <div class="container">
           <div class="row">
             <div class="col-2-of-3">
               <div class="MainMenu">
                 <a href="main.html" class="MainMenu MainMenu--MenuItem"
                   >HomePage</a
                 >
-                <a href="#" class="MainMenu MainMenu--MenuItem">Tours</a>
+                <a href="tours.html" class="MainMenu MainMenu--MenuItem"
+                  >Tours</a
+                >
                 <a href="#" class="MainMenu MainMenu--MenuItem">Full Width</a>
                 <a href="#" class="MainMenu MainMenu--MenuItem">Portfolio</a>
                 <a href="#" class="MainMenu MainMenu--MenuItem">Gallery</a>
@@ -74,124 +75,94 @@
       </div>
     </nav>
 
-    <header class="header">
-      <div class="header__text-box">
-        <h1 class="heading-primary">
-          <span class="heading-primary--main">Outdoors</span>
+    <!-- Login -->
 
-          <span class="heading-primary--sub">is where life happens</span>
-        </h1>
-
-        <a href="#section-tours" class="btn btn--white">Discover our tours</a>
-      </div>
-    </header>
-
-    <section class="section-about">
+    <section class="section-login">
       <div class="container">
-        <div class="u-center-text u-margin-bottom-big">
-          <h2 class="heading-secondary">
-            Exciting tours for adventurous people
-          </h2>
-        </div>
         <div class="row">
-          <div class="col-1-of-2">
-            <h3 class="heading-tertiary u-margin-bottom-small">
-              You are going to fall in love with nature
-            </h3>
-            <p class="paragraph u-margin-bottom-small">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Voluptates, vero. Architecto earum non hic! Architecto nesciunt
-              ipsam error illum, sint maiores, praesentium eum cupiditate cumque
-              id sit explicabo doloremque ea?
-            </p>
-            <h3 class="heading-tertiary">
-              Live adventures like you never have before
-            </h3>
-            <p class="paragraph">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Voluptates, vero. Architecto earum non hic!
-            </p>
-            <a href="#" class="btn-text">
-              Learn more &rarr;
-            </a>
-          </div>
-          <div class="col-1-of-2">
-            <div class="composition">
-              <img
-                src="img/nat-1-large.jpg"
-                alt="Photo 1"
-                class="composition__photo composition__photo--p1"
-              />
-              <img
-                src="img/nat-2-large.jpg"
-                alt="Photo 2"
-                class="composition__photo composition__photo--p2"
-              />
-              <img
-                src="img/nat-3-large.jpg"
-                alt="Photo 3"
-                class="composition__photo composition__photo--p3"
-              />
+          <div class="login">
+            <div class="login__form">
+              <form id="test" action="#" class="form">
+                <div class="u-margin-bottom-small">
+                  <h2 class="heading-secondary">
+                    Your informations
+                  </h2>
+                </div>
+                <div id="fullname" class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Full name"
+                    id="name"
+                    required
+                  />
+                  <label for="name" class="form__label">Full name</label>
+                </div>
+                <div class="form__group">
+                  <input
+                    type="email"
+                    class="form__input"
+                    placeholder="Email address"
+                    id="email"
+                    required
+                  />
+                  <label for="email" class="form__label">Email address</label>
+                </div>
+
+                <div class="form__group">
+                  <input
+                    type="password"
+                    class="form__input"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}"
+                    placeholder="Password"
+                    id="password"
+                    required
+                  />
+                  <label for="password" class="form__label">Password</label>
+                </div>
+
+                <div class="form__group u-margin-bottom-medium">
+                  <div class="form__radio-group">
+                    <input
+                      onclick="check2()"
+                      type="radio"
+                      class="form__radio-input"
+                      id="large"
+                      name="size"
+                    />
+                    <label for="large" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Sign up
+                    </label>
+                  </div>
+                  <div class="form__radio-group">
+                    <input
+                      onclick="check()"
+                      type="radio"
+                      class="form__radio-input"
+                      id="small"
+                      name="size"
+                    />
+                    <label for="small" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Login
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form__group">
+                  <button class="btn btn--green" onclick="test()">
+                    Next step &rarr;
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-features">
-      <div class="container">
-        <div class="row">
-          <div class="col-1-of-4">
-            <div class="feature-box">
-              <i class="feature-box__icon icon-basic-world"></i>
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Expore the world
-              </h3>
-              <p class="feature-box__text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Voluptates, vero. Architecto earum non hic!
-              </p>
-            </div>
-          </div>
-          <div class="col-1-of-4">
-            <div class="feature-box">
-              <i class="feature-box__icon icon-basic-compass"></i>
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Meet Nature
-              </h3>
-              <p class="feature-box__text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Voluptates, vero. Architecto earum non hic!
-              </p>
-            </div>
-          </div>
-          <div class="col-1-of-4">
-            <div class="feature-box">
-              <i class="feature-box__icon icon-basic-map"></i>
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Find Your Way
-              </h3>
-              <p class="feature-box__text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Voluptates, vero. Architecto earum non hic!
-              </p>
-            </div>
-          </div>
-          <div class="col-1-of-4">
-            <div class="feature-box">
-              <i class="feature-box__icon icon-basic-heart"></i>
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Live a healthier life
-              </h3>
-              <p class="feature-box__text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Voluptates, vero. Architecto earum non hic!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- footer -->
     <footer id="footer-section">
       <div class="container">
         <div class="row">
@@ -267,4 +238,5 @@
       </div>
     </footer>
   </body>
+  <script src="script/auth.js"></script>
 </html>
