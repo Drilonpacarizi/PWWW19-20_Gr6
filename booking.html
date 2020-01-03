@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel="stylesheet" href="style/auth.css" />
+    <link rel="stylesheet" href="style/booking.css" />
   </head>
   <body>
     <header>
@@ -28,8 +28,8 @@
           </li>
 
           <li class="menuItem menuItem--item">
-            <a href="#">Sign Up</a>
-            <a href="#">Login</a>
+            <a href="auth.html">Sign Up</a>
+            <a href="auth.html">Login</a>
             <a href="#">RSS Feeds</a>
             <a href="#">Archived News</a>
           </li>
@@ -77,92 +77,128 @@
       </div>
     </nav>
 
-    <!-- Login -->
-
-    <section class="section-login">
+    <section class="section-tours" id="section-tours">
       <div class="container">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">
+            Most popular tours
+          </h2>
+        </div>
+
         <div class="row">
-          <div class="login">
-            <div class="login__form">
-              <form id="test" action="#" class="form">
-                <div class="u-margin-bottom-small">
-                  <h2 class="heading-secondary">
-                    Your informations
-                  </h2>
+          <div class="col-1-of-3">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--1">
+                  &nbsp;
                 </div>
-                <div id="fullname" class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Full name"
-                    id="name"
-                    required
-                  />
-                  <label for="name" class="form__label">Full name</label>
+                <h4 class="card__heading">
+                  <span class="card__heading-span--1">
+                    The Sea Explore
+                  </span>
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>3 day tours</li>
+                    <li>Up to 30 people</li>
+                    <li>2 tour guides</li>
+                    <li>Sleeping in cazy hotels</li>
+                    <li>Difficulty: easy</li>
+                  </ul>
                 </div>
-                <div class="form__group">
-                  <input
-                    type="email"
-                    class="form__input"
-                    placeholder="Email address"
-                    id="email"
-                    required
-                  />
-                  <label for="email" class="form__label">Email address</label>
-                </div>
-
-                <div class="form__group">
-                  <input
-                    type="password"
-                    class="form__input"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}"
-                    placeholder="Password"
-                    id="password"
-                    required
-                  />
-                  <label for="password" class="form__label">Password</label>
-                </div>
-
-                <div class="form__group u-margin-bottom-medium">
-                  <div class="form__radio-group">
-                    <input
-                      onclick="check2()"
-                      type="radio"
-                      class="form__radio-input"
-                      id="large"
-                      name="size"
-                    />
-                    <label for="large" class="form__radio-label">
-                      <span class="form__radio-button"></span>
-                      Sign up
-                    </label>
+              </div>
+              <div class="card__side card__side--back card__side--back-1">
+                <div class="card__cta">
+                  <div class="card__price-box">
+                    <p class="card__price-only">Only</p>
+                    <p class="card__price-value">$297</p>
                   </div>
-                  <div class="form__radio-group">
-                    <input
-                      onclick="check()"
-                      type="radio"
-                      class="form__radio-input"
-                      id="small"
-                      name="size"
-                    />
-                    <label for="small" class="form__radio-label">
-                      <span class="form__radio-button"></span>
-                      Login
-                    </label>
-                  </div>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
+              </div>
+            </div>
+          </div>
 
-                <div class="form__group">
-                  <button class="btn btn--green" onclick="test()">
-                    Next step &rarr;
-                  </button>
+          <div class="col-1-of-3">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--2">
+                  &nbsp;
                 </div>
-              </form>
+                <h4 class="card__heading">
+                  <span class="card__heading-span--2">
+                    The Forest Hiker
+                  </span>
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>7 day tours</li>
+                    <li>Up to 40 people</li>
+                    <li>6 tour guides</li>
+                    <li>Sleeping in provided tents</li>
+                    <li>Difficulty: medium</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back card__side--back-2">
+                <div class="card__cta">
+                  <div class="card__price-box">
+                    <p class="card__price-only">Only</p>
+                    <p class="card__price-value">$497</p>
+                  </div>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-1-of-3">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--3">
+                  &nbsp;
+                </div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span--3">
+                    The Snow Adventurer
+                  </span>
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>5 day tours</li>
+                    <li>Up to 15 people</li>
+                    <li>3 tour guides</li>
+                    <li>Sleeping in provided tents</li>
+                    <li>Difficulty: hard</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back card__side--back-3">
+                <div class="card__cta">
+                  <div class="card__price-box">
+                    <p class="card__price-only">Only</p>
+                    <p class="card__price-value">$397</p>
+                  </div>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="u-center-text u-margin-top-huge">
+          <a href="#" class="btn btn--green">Discover all tours</a>
+        </div>
       </div>
     </section>
+
+    <div id="map"></div>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHnbtjKk3N4DSBjl3v72itZTTDODlW8rw&callback=initMap"
+    ></script>
 
     <!-- footer -->
     <footer id="footer-section">
@@ -240,5 +276,5 @@
       </div>
     </footer>
   </body>
-  <script src="script/auth.js"></script>
+  <script src="script/booking.js"></script>
 </html>
