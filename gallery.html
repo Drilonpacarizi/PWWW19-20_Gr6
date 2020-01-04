@@ -77,22 +77,92 @@
       </div>
     </nav>
 
+    <section class="section-stories">
+      <div class="bg-video">
+        <video class="bg-video__content" autoplay muted loop>
+          <source src="img/video.mp4" type="video/mp4" />
+          <source src="img/video.webm" type="video/webm" />
+          Your broswer is not supported!
+        </video>
+      </div>
+
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">
+          We make people genuinely happly
+        </h2>
+      </div>
+
+      <div class="row">
+        <div class="story">
+          <figure class="story__shape">
+            <img
+              src="img/nat-8.jpg"
+              alt="Person on a tour"
+              class="story__img"
+            />
+            <figcaption class="story__caption">
+              Mary Smith
+            </figcaption>
+          </figure>
+          <div class="story__text">
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              I had the best week ever with my family
+            </h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Voluptates, vero. Architecto earum non hic!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="story">
+          <div>
+            <figure class="story__shape">
+              <img
+                src="img/nat-9.jpg"
+                alt="Person on a tour"
+                class="story__img"
+              />
+              <figcaption class="story__caption">
+                Jack Wilson
+              </figcaption>
+            </figure>
+          </div>
+          <div class="story__text">
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Wow! my life is complitely different now!
+            </h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Voluptates, vero. Architecto earum non hic!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="u-center-text u-margin-top-huge">
+        <a href="#" class="btn-text">Read All Stories &rarr; </a>
+      </div>
+    </section>
+
     <section class="uts">
       <div class="container">
         <table border="1" width="100%">
           <caption>
-            <strong>Calculator</strong>
+            <strong>Llogarite te dhenat</strong>
           </caption>
           <thead>
             <tr>
               <th>
-                First number :
+                Numri i pare :
               </th>
               <th>
-                Second number :
+                Numri i dyte :
               </th>
               <th colspan="2">
-                Results :
+                Rezultati :
               </th>
             </tr>
           </thead>
@@ -127,7 +197,7 @@
               <td>
                 <div class="form__group">
                   <button class="btn btn--green" onclick="vendosNumrin1()">
-                    Calculate
+                    Llogarit
                   </button>
                 </div>
               </td>
@@ -138,10 +208,10 @@
                     id="rez"
                     type="text"
                     class="form__input"
-                    placeholder="Results"
+                    placeholder="Rezultati"
                     readonly
                   />
-                  <label for="rez" class="form__label">Result</label>
+                  <label for="rez" class="form__label">Rezultati</label>
                 </div>
               </td>
             </tr>
@@ -176,7 +246,7 @@
               <td>
                 <div class="form__group">
                   <button class="btn btn--green" onclick="vendosNumrin2()">
-                    Calculate
+                    Llogarit
                   </button>
                 </div>
               </td>
@@ -186,19 +256,19 @@
                   <input
                     type="text"
                     class="form__input"
-                    placeholder="Results"
+                    placeholder="Rezultati"
                     id="rez2"
                     readonly
                     required
                   />
-                  <label for="rez2" class="form__label">Result</label>
+                  <label for="rez2" class="form__label">Rezultati</label>
                 </div>
               </td>
             </tr>
             <tr>
               <td colspan="4">
                 <div class="dropdown">
-                  <button class="dropbtn">Choose one option</button>
+                  <button class="dropbtn">Zgjedh njerin nga opsionet</button>
                   <div class="dropdown-content">
                     <a href="#" id="Mbledh" onclick="kryejVeprimet('mbledh')"
                       >+</a
@@ -220,12 +290,12 @@
                   <input
                     type="text"
                     class="form__input"
-                    placeholder="Results"
+                    placeholder="Rezultati"
                     id="rezz1"
                     readonly
                     required
                   />
-                  <label for="rezz1" class="form__label">Result</label>
+                  <label for="rezz1" class="form__label">Rezultati</label>
                 </div>
               </th>
               <th>
@@ -233,12 +303,12 @@
                   <input
                     type="text"
                     class="form__input"
-                    placeholder="Results"
+                    placeholder="Rezultati"
                     id="rezz2"
                     readonly
                     required
                   />
-                  <label for="rezz2" class="form__label">Results</label>
+                  <label for="rezz2" class="form__label">Rezultati</label>
                 </div>
               </th>
 
@@ -247,12 +317,12 @@
                   <input
                     type="text"
                     class="form__input"
-                    placeholder="Results"
+                    placeholder="Rezultati"
                     id="rezz3"
                     readonly
                     required
                   />
-                  <label for="rezz3" class="form__label">Results</label>
+                  <label for="rezz3" class="form__label">Rezultati</label>
                 </div>
               </th>
             </tr>
