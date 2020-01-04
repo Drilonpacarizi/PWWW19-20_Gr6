@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <link href="style/gallery.css" rel="stylesheet" />
+    <title>Gallery</title>
+  </head>
+  <body>
+    <header>
+      <!-- <div class="container"> -->
+      <div class="icons">
+        <a class="icon icon--linkedin" href="#"></a>
+        <a class="icon icon--twitter" href="#"></a>
+        <a class="icon icon--pinterest" href="#"></a>
+        <a class="icon icon--google-plus" href="#"></a>
+        <a class="icon icon--rss" href="#"></a>
+      </div>
+      <div class="title">
+        <h1 class="title title--text">
+          concomitant
+        </h1>
+
+        <ul class="menuItem">
+          <li class="menuItem menuItem--item">
+            Free PSD Website Template
+          </li>
+
+          <li class="menuItem menuItem--item">
+            <a href="auth.html">Sign Up</a>
+            <a href="auth.html">Login</a>
+            <a href="#">RSS Feeds</a>
+            <a href="#">Archived News</a>
+          </li>
+        </ul>
+      </div>
+      <!-- </div> -->
+    </header>
+
+    <nav class="MenuFrame">
+      <div class="menu">
+        <div class="container">
+          <div class="row">
+            <div class="col-2-of-3">
+              <div class="MainMenu">
+                <a class="MainMenu MainMenu--MenuItem" href="main.html"
+                  >HomePage</a
+                >
+                <a class="MainMenu MainMenu--MenuItem" href="tours.html"
+                  >Tours</a
+                >
+                <a class="MainMenu MainMenu--MenuItem" href="booking.html"
+                  >Booking</a
+                >
+                <a class="MainMenu MainMenu--MenuItem" href="#">Portfolio</a>
+                <a class="MainMenu MainMenu--MenuItem" href="#">Gallery</a>
+                <a class="MainMenu MainMenu--MenuItem" href="#">DropDown</a>
+              </div>
+            </div>
+            <div class="col-1-of-3">
+              <form class="b-search-form b-menu__search-form">
+                <input
+                  class="b-search-form__input"
+                  placeholder="Search our website..."
+                  type="text"
+                />
+                <input
+                  class="b-search-form__input b-search-form__input_button"
+                  type="submit"
+                  value="Search"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="uts">
+      <div class="container">
+        <table border="1" width="100%">
+          <caption>
+            <strong>Calculator</strong>
+          </caption>
+          <thead>
+            <tr>
+              <th>
+                First number :
+              </th>
+              <th>
+                Second number :
+              </th>
+              <th colspan="2">
+                Results :
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Number 1"
+                    pattern="[0-9]+"
+                    id="nr1"
+                    required
+                  />
+                  <label for="nr1" class="form__label">Number 1</label>
+                </div>
+              </td>
+              <td>
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Number 2"
+                    pattern="[0-9]+"
+                    id="nr2"
+                    required
+                  />
+                  <label for="nr2" class="form__label">Number 2</label>
+                </div>
+              </td>
+              <td>
+                <div class="form__group">
+                  <button class="btn btn--green" onclick="vendosNumrin1()">
+                    Calculate
+                  </button>
+                </div>
+              </td>
+
+              <td>
+                <div class="form__group">
+                  <input
+                    id="rez"
+                    type="text"
+                    class="form__input"
+                    placeholder="Results"
+                    readonly
+                  />
+                  <label for="rez" class="form__label">Result</label>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    pattern="[0-9]+"
+                    placeholder="Number 1"
+                    id="nr3"
+                    required
+                  />
+                  <label for="nr3" class="form__label">Number 1</label>
+                </div>
+              </td>
+              <td>
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    pattern="[0-9]+"
+                    placeholder="Number 2"
+                    id="nr4"
+                    required
+                  />
+                  <label for="nr4" class="form__label">Number 2</label>
+                </div>
+              </td>
+              <td>
+                <div class="form__group">
+                  <button class="btn btn--green" onclick="vendosNumrin2()">
+                    Calculate
+                  </button>
+                </div>
+              </td>
+
+              <td>
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Results"
+                    id="rez2"
+                    readonly
+                    required
+                  />
+                  <label for="rez2" class="form__label">Result</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <div class="dropdown">
+                  <button class="dropbtn">Choose one option</button>
+                  <div class="dropdown-content">
+                    <a href="#" id="Mbledh" onclick="kryejVeprimet('mbledh')"
+                      >+</a
+                    >
+                    <a href="#" id="Zbrit" onclick="kryejVeprimet('zbrit')"
+                      >-</a
+                    >
+                    <a id="Shumezo" onclick="kryejVeprimet('shumezo')">*</a>
+                    <a id="Pjeseto" onclick="kryejVeprimet('pjeseto')">/</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Results"
+                    id="rezz1"
+                    readonly
+                    required
+                  />
+                  <label for="rezz1" class="form__label">Result</label>
+                </div>
+              </th>
+              <th>
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Results"
+                    id="rezz2"
+                    readonly
+                    required
+                  />
+                  <label for="rezz2" class="form__label">Results</label>
+                </div>
+              </th>
+
+              <th colspan="2">
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Results"
+                    id="rezz3"
+                    readonly
+                    required
+                  />
+                  <label for="rezz3" class="form__label">Results</label>
+                </div>
+              </th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <footer id="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-1-of-4">
+            <div class="footer-container">
+              <div class="footer-header">
+                <h2>Contact Details</h2>
+              </div>
+              <p>
+                Convallisijusto vestas mus pellentum aenean sapibulum in aliquam
+                volut pat integest nulla.
+              </p>
+              <address>
+                Tel: xxxxx xxxxxxxxxx <br />
+                Fax: xxxxx xxxxxxxxxx<br />
+                Email: contact@mydomain.com
+              </address>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="footer-container">
+              <div class="footer-header">
+                <h2>Quick Links</h2>
+              </div>
+
+              <div class="footer-list">
+                <ul>
+                  <li><a href="#">Link text here</a></li>
+                  <li><a href="#">Link text here</a></li>
+                  <li><a href="#">Link text here</a></li>
+                  <li><a href="#">Link text here</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="footer-container">
+              <div class="footer-header">
+                <h2>Form The blog</h2>
+              </div>
+              <h5>Blog Post Title</h5>
+              <small>Posted by Admin on 00.00.0000</small>
+              <p>
+                Vestibulumaccumsan egestibulum eu justo convallis augue estas
+                aenean elit intesque sed facilispede estibulum.
+              </p>
+              <a href="#">Read More »</a>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="footer-container">
+              <div class="footer-header">
+                <h2>Grab our newsletter</h2>
+              </div>
+              <form>
+                <input class="footer-form" placeholder="Name" type="text" />
+                <input class="footer-form" placeholder="Email" type="email" />
+                <input class="form-submit" type="submit" value="Submit" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer id="about-me">
+      <div class="container">
+        <div class="about-me">
+          <p>
+            Copyright &copy 2013 - All Rights Reserved - Domain Name
+          </p>
+          <p>Template by OS Templates</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="script/gallery.js"></script>
+</html>
