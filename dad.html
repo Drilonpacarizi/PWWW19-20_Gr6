@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Drag and Drop</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+        updateOrder(ev.target.id);
+      }
+
+      function updateOrder(id) {
+        var w = document.getElementById(id);
+        for (var i = 0; i < w.childNodes.length; i++) {
+          var node = w.childNodes[i];
+          document.getElementById("order-" + i).value = node.id;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form role="form">
+      <div>
+        <label for="order">Put in order:</label>
+        <input type="hidden" name="order-1" id="order-0" value="" />
+        <input type="hidden" name="order-2" id="order-1" value="" />
+        <input type="hidden" name="order-3" id="order-2" value="" />
+        <input type="hidden" name="order-4" id="order-3" value="" />
+        <div
+          style="border: 1px dashed #ddd; padding: 0.5em; min-height: 2em; margin-bottom: 4px;"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+          id="drop-from"
+          placeholder=""
+        >
+          <div
+            draggable="true"
+            ondragstart="drag(event)"
+            style="float: left;"
+            id="option-1"
+          >
+            Cat
+          </div>
+          <div
+            draggable="true"
+            ondragstart="drag(event)"
+            style="float: left;"
+            id="option-2"
+          >
+            Dog
+          </div>
+          <div
+            draggable="true"
+            ondragstart="drag(event)"
+            style="float: left;"
+            id="option-3"
+          >
+            Horse
+          </div>
+          <div
+            draggable="true"
+            ondragstart="drag(event)"
+            style="float: left;"
+            id="option-4"
+          >
+            Chicken
+          </div>
+        </div>
+        <div
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+          id="drop-form"
+          placeholder=""
+        ></div>
+      </div>
+    </form>
+  </body>
+</html>

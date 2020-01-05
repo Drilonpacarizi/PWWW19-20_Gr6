@@ -7,43 +7,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="style/things.css" />
     <style>
+      #changeBG {
+        resize: both;
+        overflow: auto;
+      }
+
       .shopping-cart {
         width: 300px;
       }
 
       .wheel-back {
         fill: orange;
-      }
-
-      #box {
-        /* float: center; */
-        margin: auto;
-        width: 632px;
-        height: 200px;
-        border: 3px solid green;
-        padding: 10px;
-      }
-      #box1,
-      #box2,
-      #box3 {
-        float: left;
-        margin: 5px;
-        padding: 10px;
-      }
-      #box1 {
-        width: 50px;
-        height: 50px;
-        background-color: #f5b5c5;
-      }
-      #box2 {
-        width: 100px;
-        height: 100px;
-        background-color: #b5d5f5;
-      }
-      #box3 {
-        width: 150px;
-        height: 150px;
-        background-color: #bea7cc;
       }
 
       .dad {
@@ -67,19 +41,6 @@
           // It's night
           document.getElementById("changeBG").style.backgroundColor = "#000000";
         }
-      }
-      function allowDrop(ev) {
-        ev.preventDefault();
-      }
-
-      function dragStart(ev) {
-        ev.dataTransfer.setData("text", ev.target.id);
-      }
-
-      function dragDrop(ev) {
-        ev.preventDefault();
-        var data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
       }
     </script>
   </head>
@@ -125,6 +86,9 @@
             />
           </g>
         </svg>
+        <!-- <p>Count numbers: <output id="result"></output></p>
+        <button onclick="startWorker()">Start Worker</button>
+        <button onclick="stopWorker()">Stop Worker</button> -->
 
         <svg width="100%" height="100%">
           <rect width="100%" height="100%" fill="red" />
@@ -143,202 +107,214 @@
           </text>
         </svg>
 
-        <div class="dad">Drag and Drop</div>
-        <div id="box">
-          <div id="box1" draggable="true" ondragstart="dragStart(event)"></div>
-          <div id="box2" draggable="true" ondragstart="dragStart(event)"></div>
-          <div
-            id="box3"
-            ondrop="dragDrop(event)"
-            ondragover="allowDrop(event)"
-          ></div>
-        </div>
+        <a class="dad" href="dad.html" target="_blank">Drag and Drop</a>
+
+        <section class="uts">
+          <div class="container">
+            <table border="1" width="100%">
+              <caption>
+                <strong>Calculate</strong>
+              </caption>
+              <thead>
+                <tr>
+                  <th>
+                    1st Number :
+                  </th>
+                  <th>
+                    2nd Number :
+                  </th>
+                  <th colspan="2">
+                    Result :
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="form__group">
+                      <input
+                        type="text"
+                        class="form__input"
+                        placeholder="Number 1"
+                        pattern="[0-9]+"
+                        id="nr1"
+                        required
+                      />
+                      <label for="nr1" class="form__label">Number 1</label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form__group">
+                      <input
+                        type="text"
+                        class="form__input"
+                        placeholder="Number 2"
+                        pattern="[0-9]+"
+                        id="nr2"
+                        required
+                      />
+                      <label for="nr2" class="form__label">Number 2</label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form__group">
+                      <button class="btn btn--green" onclick="vendosNumrin1()">
+                        Calculate
+                      </button>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="form__group">
+                      <input
+                        id="rez"
+                        type="text"
+                        class="form__input"
+                        placeholder="Result"
+                        readonly
+                      />
+                      <label for="rez" class="form__label">Result</label>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="form__group">
+                      <input
+                        type="text"
+                        class="form__input"
+                        pattern="[0-9]+"
+                        placeholder="Number 1"
+                        id="nr3"
+                        required
+                      />
+                      <label for="nr3" class="form__label">Number 1</label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form__group">
+                      <input
+                        type="text"
+                        class="form__input"
+                        pattern="[0-9]+"
+                        placeholder="Number 2"
+                        id="nr4"
+                        required
+                      />
+                      <label for="nr4" class="form__label">Number 2</label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form__group">
+                      <button class="btn btn--green" onclick="vendosNumrin2()">
+                        Calculate
+                      </button>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="form__group">
+                      <input
+                        type="text"
+                        class="form__input"
+                        placeholder="Result"
+                        id="rez2"
+                        readonly
+                        required
+                      />
+                      <label for="rez2" class="form__label">Result</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="4">
+                    <div class="dropdown">
+                      <button class="dropbtn">Choose one of the opsions</button>
+                      <div class="dropdown-content">
+                        <a id="Plus" onclick="kryejVeprimet('mbledh')"
+                          >Plus (+)</a
+                        >
+                        <a id="Minus" onclick="kryejVeprimet('zbrit')"
+                          >Minus (-)</a
+                        >
+                        <a
+                          id="Multiplication"
+                          onclick="kryejVeprimet('shumezo')"
+                          >Multiply (*)</a
+                        >
+                        <a id="Divide" onclick="kryejVeprimet('pjeseto')"
+                          >Divide (/)</a
+                        >
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>
+                    <div class="form__group">
+                      <input
+                        type="text"
+                        class="form__input"
+                        placeholder="Result"
+                        id="rezz1"
+                        readonly
+                        required
+                      />
+                      <label for="rezz1" class="form__label">Result</label>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="form__group">
+                      <input
+                        type="text"
+                        class="form__input"
+                        placeholder="Result"
+                        id="rezz2"
+                        readonly
+                        required
+                      />
+                      <label for="rezz2" class="form__label">Result</label>
+                    </div>
+                  </th>
+
+                  <th colspan="2">
+                    <div class="form__group">
+                      <input
+                        type="text"
+                        class="form__input"
+                        placeholder="Result"
+                        id="rezz3"
+                        readonly
+                        required
+                      />
+                      <label for="rezz3" class="form__label">Result</label>
+                    </div>
+                  </th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </section>
+        <section style="text-align: center;">
+          <form
+            oninput="sumresult.value = parseInt(A.value)  
+                + parseInt(B.value) + parseInt(C.value)"
+          >
+            <input type="number" name="A" value="50" /> +
+            <input type="range" name="B" value="0" /> +
+            <input type="number" name="C" value="50" />
+            <br />
+            Submit Result:
+            <output name="sumresult" for="A B C"></output>
+            <br />
+            <input type="submit" />
+          </form>
+        </section>
       </div>
     </div>
-
-    <section class="uts">
-      <div class="container">
-        <table border="1" width="100%">
-          <caption>
-            <strong>Calculate</strong>
-          </caption>
-          <thead>
-            <tr>
-              <th>
-                1st Number :
-              </th>
-              <th>
-                2nd Number :
-              </th>
-              <th colspan="2">
-                Result :
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Number 1"
-                    pattern="[0-9]+"
-                    id="nr1"
-                    required
-                  />
-                  <label for="nr1" class="form__label">Number 1</label>
-                </div>
-              </td>
-              <td>
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Number 2"
-                    pattern="[0-9]+"
-                    id="nr2"
-                    required
-                  />
-                  <label for="nr2" class="form__label">Number 2</label>
-                </div>
-              </td>
-              <td>
-                <div class="form__group">
-                  <button class="btn btn--green" onclick="vendosNumrin1()">
-                    Calculate
-                  </button>
-                </div>
-              </td>
-
-              <td>
-                <div class="form__group">
-                  <input
-                    id="rez"
-                    type="text"
-                    class="form__input"
-                    placeholder="Result"
-                    readonly
-                  />
-                  <label for="rez" class="form__label">Result</label>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    pattern="[0-9]+"
-                    placeholder="Number 1"
-                    id="nr3"
-                    required
-                  />
-                  <label for="nr3" class="form__label">Number 1</label>
-                </div>
-              </td>
-              <td>
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    pattern="[0-9]+"
-                    placeholder="Number 2"
-                    id="nr4"
-                    required
-                  />
-                  <label for="nr4" class="form__label">Number 2</label>
-                </div>
-              </td>
-              <td>
-                <div class="form__group">
-                  <button class="btn btn--green" onclick="vendosNumrin2()">
-                    Calculate
-                  </button>
-                </div>
-              </td>
-
-              <td>
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Result"
-                    id="rez2"
-                    readonly
-                    required
-                  />
-                  <label for="rez2" class="form__label">Result</label>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="4">
-                <div class="dropdown">
-                  <button class="dropbtn">Choose one of the opsions</button>
-                  <div class="dropdown-content">
-                    <a id="Plus" onclick="kryejVeprimet('mbledh')">Plus (+)</a>
-                    <a id="Minus" onclick="kryejVeprimet('zbrit')">Minus (-)</a>
-                    <a id="Multiplication" onclick="kryejVeprimet('shumezo')"
-                      >Multiply (*)</a
-                    >
-                    <a id="Divide" onclick="kryejVeprimet('pjeseto')"
-                      >Divide (/)</a
-                    >
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <th>
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Result"
-                    id="rezz1"
-                    readonly
-                    required
-                  />
-                  <label for="rezz1" class="form__label">Result</label>
-                </div>
-              </th>
-              <th>
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Result"
-                    id="rezz2"
-                    readonly
-                    required
-                  />
-                  <label for="rezz2" class="form__label">Result</label>
-                </div>
-              </th>
-
-              <th colspan="2">
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Result"
-                    id="rezz3"
-                    readonly
-                    required
-                  />
-                  <label for="rezz3" class="form__label">Result</label>
-                </div>
-              </th>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-    </section>
   </body>
   <script src="script/things.js"></script>
 </html>

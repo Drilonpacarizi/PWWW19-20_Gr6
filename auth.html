@@ -44,8 +44,8 @@
           </li>
 
           <li class="menuItem menuItem--item">
-            <a href="#">Sign Up</a>
-            <a href="#">Login</a>
+            <a id="signup" href="auth.html">Sign Up</a>
+            <a id="login" href="auth.html">Login</a>
             <a href="#">RSS Feeds</a>
             <a href="#">Archived News</a>
           </li>
@@ -55,40 +55,42 @@
     </header>
 
     <nav class="MenuFrame">
-      <div class="menu">
-        <div class="container">
-          <div class="row">
-            <div class="col-2-of-3">
-              <div class="MainMenu">
-                <a href="main.html" class="MainMenu MainMenu--MenuItem"
-                  >HomePage</a
-                >
-                <a href="tours.html" class="MainMenu MainMenu--MenuItem"
-                  >Tours</a
-                >
-                <a href="booking.html" class="MainMenu MainMenu--MenuItem"
-                  >Booking</a
-                >
-                <a href="#" class="MainMenu MainMenu--MenuItem">Portfolio</a>
-                <a href="gallery.html" class="MainMenu MainMenu--MenuItem"
-                  >Gallery</a
-                >
-                <a href="#" class="MainMenu MainMenu--MenuItem">DropDown</a>
+      <div class="container1">
+        <div class="menu">
+          <div class="container">
+            <div class="row">
+              <div class="col-2-of-3">
+                <div class="MainMenu">
+                  <a href="main.html" class="MainMenu MainMenu--MenuItem"
+                    >HomePage</a
+                  >
+                  <a href="tours.html" class="MainMenu MainMenu--MenuItem"
+                    >Tours</a
+                  >
+                  <a href="booking.html" class="MainMenu MainMenu--MenuItem"
+                    >Booking</a
+                  >
+                  <a href="#" class="MainMenu MainMenu--MenuItem">Portfolio</a>
+                  <a href="gallery.html" class="MainMenu MainMenu--MenuItem"
+                    >Gallery</a
+                  >
+                  <a href="#" class="MainMenu MainMenu--MenuItem">DropDown</a>
+                </div>
               </div>
-            </div>
-            <div class="col-1-of-3">
-              <form class="b-search-form b-menu__search-form">
-                <input
-                  class="b-search-form__input"
-                  type="text"
-                  placeholder="Search our website..."
-                />
-                <input
-                  class="b-search-form__input b-search-form__input_button"
-                  type="submit"
-                  value="Search"
-                />
-              </form>
+              <div class="col-1-of-3">
+                <form class="b-search-form b-menu__search-form">
+                  <input
+                    class="b-search-form__input"
+                    type="text"
+                    placeholder="Search our website..."
+                  />
+                  <input
+                    class="b-search-form__input b-search-form__input_button"
+                    type="submit"
+                    value="Search"
+                  />
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -153,6 +155,7 @@
                       class="form__radio-input"
                       id="large"
                       name="size"
+                      checked
                     />
                     <label for="large" class="form__radio-label">
                       <span class="form__radio-button"></span>

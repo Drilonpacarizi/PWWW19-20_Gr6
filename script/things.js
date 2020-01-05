@@ -205,8 +205,12 @@ function vendosNumrin1() {
   let x = ktheRez();
   let y = document.getElementById("rez");
 
-  if (typeof x == "number") {
+  try {
+    if (x == "") throw "empty";
+    if (isNaN(x)) throw "not a number";
     y.placeholder = "Result : " + x;
+  } catch (err) {
+    y.placeholder = "Input is " + err;
   }
 }
 
@@ -214,8 +218,12 @@ function vendosNumrin2() {
   let x = ktheRez2();
   let y = document.getElementById("rez2");
 
-  if (typeof x == "number") {
+  try {
+    if (x == "") throw "empty";
+    if (isNaN(x)) throw "not a number";
     y.placeholder = "Result : " + x;
+  } catch (err) {
+    y.placeholder = "Input is " + err;
   }
 }
 
@@ -223,27 +231,38 @@ function kryejVeprimet(x) {
   let a = document.getElementById("rezz1");
   let b = document.getElementById("rezz2");
   let c = document.getElementById("rezz3");
-  console.log(x);
   switch (x) {
     case "mbledh":
-      a.placeholder = "Result : " + (nr1[0] + nr1[1]);
-      b.placeholder = "Result : " + (nr2[0] + nr2[1]);
-      c.placeholder = "Result : " + (rez[0] + rez[1]);
+      a.placeholder =
+        "Result : " + (nr1[0] + nr1[1]).toExponential().toString();
+      b.placeholder =
+        "Result : " + (nr2[0] + nr2[1]).toExponential().toString();
+      c.placeholder =
+        "Result : " + (rez[0] + rez[1]).toExponential().toString();
       break;
     case "zbrit":
-      a.placeholder = "Result : " + (nr1[0] - nr1[1]);
-      b.placeholder = "Result : " + (nr2[0] - nr2[1]);
-      c.placeholder = "Result : " + (rez[0] - rez[1]);
+      a.placeholder =
+        "Result : " + (nr1[0] - nr1[1]).toExponential().toString();
+      b.placeholder =
+        "Result : " + (nr2[0] - nr2[1]).toExponential().toString();
+      c.placeholder =
+        "Result : " + (rez[0] - rez[1]).toExponential().toString();
       break;
     case "shumezo":
-      a.placeholder = "Result : " + nr1[0] * nr1[1];
-      b.placeholder = "Result : " + nr2[0] * nr2[1];
-      c.placeholder = "Result : " + rez[0] * rez[1];
+      a.placeholder =
+        "Result : " + (nr1[0] * nr1[1]).toExponential().toString();
+      b.placeholder =
+        "Result : " + (nr2[0] * nr2[1]).toExponential().toString();
+      c.placeholder =
+        "Result : " + (rez[0] * rez[1]).toExponential().toString();
       break;
     case "pjeseto":
-      a.placeholder = "Result : " + nr1[0] / nr1[1];
-      b.placeholder = "Result : " + nr2[0] / nr2[1];
-      c.placeholder = "Result : " + rez[0] / rez[1];
+      a.placeholder =
+        "Result : " + (nr1[0] / nr1[1]).toExponential().toString();
+      b.placeholder =
+        "Result : " + (nr2[0] / nr2[1]).toExponential().toString();
+      c.placeholder =
+        "Result : " + (rez[0] / rez[1]).toExponential().toString();
       break;
   }
 }

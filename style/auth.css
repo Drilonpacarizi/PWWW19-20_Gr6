@@ -308,6 +308,12 @@ login */
   max-width: 85%;
 }
 
+.container1 {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 88%;
+}
+
 .form__group:not(:last-child) {
   margin-bottom: 2rem;
 }
@@ -471,7 +477,7 @@ login */
 }
 
 .btn--green {
-  background-color: #7ed56f;
+  background: radial-gradient(yellow, #55c57a);
   color: #fff;
 }
 

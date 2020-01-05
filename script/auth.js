@@ -97,6 +97,11 @@ function signUp() {
   let em = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
   let p = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
 
+  console.log(em.test("jahiriflamur@gmail.com"));
+  console.log(em.exec("drilonapa@gmail"));
+  console.log(p.test("TrimMuharremi"));
+  console.log(p.exec("TrimMuharremi1"));
+
   if (!password.match(p)) {
     alert("Password should be 6-20 chars , have : A-Z , a-z , 1-9");
     return;
@@ -108,6 +113,7 @@ function signUp() {
   getUsers.push(users);
 
   localStorage.setItem("users", JSON.stringify(getUsers));
+  document.getElementById("small").checked = true;
   alert("Succesfully Registred ! ");
   checkLogin();
 }
@@ -117,7 +123,7 @@ function checkWhich() {
     logIn();
     checkLogin();
   } else {
-    // returnDefault();
     signUp();
+    returnDefault();
   }
 }
