@@ -32,6 +32,7 @@ function returnDefault() {
 
 function checkEmail(email) {
   let x = JSON.parse(localStorage.getItem("users"));
+  if (x == null) return false;
   for (let i = 0; i < x.length; i++) {
     if (x[i].email == email) return true;
   }
@@ -46,20 +47,25 @@ function checkInfo(email, password) {
   return false;
 }
 
-let loged = false;
-
 function logIn() {
   event.preventDefault();
+  let loged = false;
+  sessionStorage.setItem("login", false);
+
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
   if (!loged) {
     if (checkInfo(email, password)) {
       loged = true;
+      sessionStorage.setItem("login", true);
+
       window.location.href = "main.html";
     } else if (!checkEmail(email)) {
+      sessionStorage.setItem("login", false);
       document.getElementById("em1").innerHTML = "E-mail is not registred !";
       document.getElementById("em1").style.color = "red";
     } else {
+      sessionStorage.setItem("login", false);
       document.getElementById("pas1").innerHTML = "Password is incorrect";
       document.getElementById("pas1").style.color = "red";
     }
@@ -88,15 +94,21 @@ function signUp() {
     alert("This e-mail is used earlier");
     return;
   }
+  let em = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
   let p = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
 
   if (!password.match(p)) {
     alert("Password should be 6-20 chars , have : A-Z , a-z , 1-9");
     return;
   }
+  if (!email.match(em)) {
+    alert("Bad email");
+    return;
+  }
   getUsers.push(users);
 
   localStorage.setItem("users", JSON.stringify(getUsers));
+  alert("Succesfully Registred ! ");
   checkLogin();
 }
 
@@ -105,7 +117,7 @@ function checkWhich() {
     logIn();
     checkLogin();
   } else {
-    resetDefault();
+    // returnDefault();
     signUp();
   }
 }

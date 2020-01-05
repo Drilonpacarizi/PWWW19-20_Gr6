@@ -11,11 +11,27 @@
     <header>
       <!-- <div class="container"> -->
       <div class="icons">
-        <a class="icon icon--linkedin" href="#"></a>
-        <a class="icon icon--twitter" href="#"></a>
-        <a class="icon icon--pinterest" href="#"></a>
-        <a class="icon icon--google-plus" href="#"></a>
-        <a class="icon icon--rss" href="#"></a>
+        <a
+          href="https://www.linkedin.com/"
+          target="”_blank”"
+          class="icon icon--linkedin"
+        ></a>
+        <a
+          href="https://www.twitter.com/"
+          target="”_blank”"
+          class="icon icon--twitter"
+        ></a>
+        <a
+          href="https://www.pinterest.com/"
+          target="”_blank”"
+          class="icon icon--pinterest"
+        ></a>
+        <a
+          href="https://www.google.com/"
+          target="”_blank”"
+          class="icon icon--google-plus"
+        ></a>
+        <a href="https://rss.app/" target="”_blank”" class="icon icon--rss"></a>
       </div>
       <div class="title">
         <h1 class="title title--text">
@@ -147,190 +163,6 @@
       </div>
     </section>
 
-    <section class="uts">
-      <div class="container">
-        <table border="1" width="100%">
-          <caption>
-            <strong>Llogarite te dhenat</strong>
-          </caption>
-          <thead>
-            <tr>
-              <th>
-                Numri i pare :
-              </th>
-              <th>
-                Numri i dyte :
-              </th>
-              <th colspan="2">
-                Rezultati :
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Number 1"
-                    pattern="[0-9]+"
-                    id="nr1"
-                    required
-                  />
-                  <label for="nr1" class="form__label">Number 1</label>
-                </div>
-              </td>
-              <td>
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Number 2"
-                    pattern="[0-9]+"
-                    id="nr2"
-                    required
-                  />
-                  <label for="nr2" class="form__label">Number 2</label>
-                </div>
-              </td>
-              <td>
-                <div class="form__group">
-                  <button class="btn btn--green" onclick="vendosNumrin1()">
-                    Llogarit
-                  </button>
-                </div>
-              </td>
-
-              <td>
-                <div class="form__group">
-                  <input
-                    id="rez"
-                    type="text"
-                    class="form__input"
-                    placeholder="Rezultati"
-                    readonly
-                  />
-                  <label for="rez" class="form__label">Rezultati</label>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    pattern="[0-9]+"
-                    placeholder="Number 1"
-                    id="nr3"
-                    required
-                  />
-                  <label for="nr3" class="form__label">Number 1</label>
-                </div>
-              </td>
-              <td>
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    pattern="[0-9]+"
-                    placeholder="Number 2"
-                    id="nr4"
-                    required
-                  />
-                  <label for="nr4" class="form__label">Number 2</label>
-                </div>
-              </td>
-              <td>
-                <div class="form__group">
-                  <button class="btn btn--green" onclick="vendosNumrin2()">
-                    Llogarit
-                  </button>
-                </div>
-              </td>
-
-              <td>
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Rezultati"
-                    id="rez2"
-                    readonly
-                    required
-                  />
-                  <label for="rez2" class="form__label">Rezultati</label>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="4">
-                <div class="dropdown">
-                  <button class="dropbtn">Zgjedh njerin nga opsionet</button>
-                  <div class="dropdown-content">
-                    <a href="#" id="Mbledh" onclick="kryejVeprimet('mbledh')"
-                      >+</a
-                    >
-                    <a href="#" id="Zbrit" onclick="kryejVeprimet('zbrit')"
-                      >-</a
-                    >
-                    <a id="Shumezo" onclick="kryejVeprimet('shumezo')">*</a>
-                    <a id="Pjeseto" onclick="kryejVeprimet('pjeseto')">/</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <th>
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Rezultati"
-                    id="rezz1"
-                    readonly
-                    required
-                  />
-                  <label for="rezz1" class="form__label">Rezultati</label>
-                </div>
-              </th>
-              <th>
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Rezultati"
-                    id="rezz2"
-                    readonly
-                    required
-                  />
-                  <label for="rezz2" class="form__label">Rezultati</label>
-                </div>
-              </th>
-
-              <th colspan="2">
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Rezultati"
-                    id="rezz3"
-                    readonly
-                    required
-                  />
-                  <label for="rezz3" class="form__label">Rezultati</label>
-                </div>
-              </th>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-    </section>
-
     <footer id="footer-section">
       <div class="container">
         <div class="row">
@@ -405,6 +237,6 @@
         </div>
       </div>
     </footer>
+    <script src="script/check.js"></script>
   </body>
-  <script src="script/gallery.js"></script>
 </html>
