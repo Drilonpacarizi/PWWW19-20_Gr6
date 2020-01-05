@@ -6,10 +6,10 @@ tours.html
 booking.html
 gallery.html
 
-styles/booking.css
-styles/gallery.css
-styles/main.css
-styles/tours.css
+style/booking.css
+style/gallery.css
+style/main.css
+style/tours.css
 
 script/booking.js
 script/check.js
@@ -34,6 +34,7 @@ NETWORK:
 auth.html
 styles/auth.css
 script/auth.js
+*
 
 FALLBACK:
 game.html

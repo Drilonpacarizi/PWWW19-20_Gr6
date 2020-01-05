@@ -29,6 +29,20 @@
     </style>
 
     <script>
+      if(window.Worker){
+            var myWorker = new Worker("script/workers.js");
+            var str1 = "asd";
+            str1 = str1.replace("asd" , Math.random()*100 + "");
+            
+            let num1 = parseInt(str1);
+        
+            
+            var message = {addThis: {num1:num1 , num2:Math.random()}};
+            myWorker.postMessage(message);
+            myWorker.onmessage = function (e) {
+                alert("Workeri ka mbledhur dy numra te rastesishem ne background : " + e.data.result );
+            };
+        }
       function changeBGbyTime() {
         let hour = new Date().getHours();
 
