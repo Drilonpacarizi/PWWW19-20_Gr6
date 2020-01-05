@@ -1,4 +1,8 @@
 var map, infoWindow;
+function constructor(map, infoWindow) {
+  this.map = map;
+  this.infoWindow = infoWindow;
+}
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
